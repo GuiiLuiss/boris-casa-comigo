@@ -12,11 +12,12 @@ Agente inteligente que usa IA generativa (Google Gemini) para ajudar você a pla
 
 **Boris Casa Comigo** é um assistente virtual desenvolvido com Streamlit e Gemini AI, projetado para ajudar na organização de pedidos de casamento e encontros especiais. Com uma abordagem descontraída e bem-humorada, o Boris guia o usuário por todas as etapas do planejamento, desde a concepção da ideia até os detalhes finais.
 
+![Boris](https://github.com/GuiiLuiss/boris-casa-comigo/blob/main/imagem/Boris_Casa_Cmg.png)
 ---
 
 ### 🎯 Funcionalidades
 
-* **Agente de Introdução e Perfil do Casal**: Coleta informações iniciais sobre o casal.
+* **Agente de Introdução e Perfil do Casal**: Coleta informações iniciais sobre o casal
 * **Agente de Ideias Criativas**: Sugere ideias personalizadas para pedidos e encontros.
 * **Agente Informativo**: Explica tradições e informações sobre noivado e casamento.
 * **Agente Financeiro**: Auxilia no planejamento financeiro do evento.
