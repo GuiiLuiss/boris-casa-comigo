@@ -2,7 +2,9 @@
 
 Agente inteligente que usa IA generativa (Google Gemini) para ajudar você a planejar o pedido de casamento perfeito. Sugestões criativas, viagens românticas, restaurantes especiais e organização completa do momento que mudará sua vida! 💍❤️
 
-![Boris](https://camo.githubusercontent.com/6f83a6685d4d6265d664731c0b1ccca8f0a75184a0bee569577f55d9a20a46a6/68747470733a2f2f74322e7475646f63646e2e6e65742f3330383537333f773d36343626683d323834)
+<div align="center">
+  <img src="https://camo.githubusercontent.com/6f83a6685d4d6265d664731c0b1ccca8f0a75184a0bee569577f55d9a20a46a6/68747470733a2f2f74322e7475646f63646e2e6e65742f3330383537333f773d36343626683d323834" alt="Boris" />
+</div>
 
 > "Fala, meu consagrado! Chegou a hora de transformar aquele 'vamos casar?' em um momento épico, digno de cinema... ou pelo menos de um bom vídeo no Insta, né não?" — Boris
 
