@@ -1,46 +1,60 @@
-# ✨ 💍Boris Casa Comigo ✨ 
+# 💍✨ Boris, Casa Comigo? – Seu agente IA do amor eterno ✨💍
 
-Agente inteligente que usa IA generativa (Google Gemini) para ajudar você a planejar o pedido de casamento perfeito. Sugestões criativas, viagens românticas, restaurantes especiais e organização completa do momento que mudará sua vida! 💍❤️
+> “Fala, meu consagrado! Chegou a hora de transformar aquele ‘vamos casar?’ em um momento ÉPICO, digno de cinema... ou pelo menos de um bom vídeo no Insta, né não?” — Boris
 
-<div align="center">
-  <img src="https://camo.githubusercontent.com/6f83a6685d4d6265d664731c0b1ccca8f0a75184a0bee569577f55d9a20a46a6/68747470733a2f2f74322e7475646f63646e2e6e65742f3330383537333f773d36343626683d323834" alt="Boris" />
-</div>
-
-> "Fala, meu consagrado! Chegou a hora de transformar aquele 'vamos casar?' em um momento épico, digno de cinema... ou pelo menos de um bom vídeo no Insta, né não?" — Boris
+**Boris Casa Comigo** é um agente inteligente que te ajuda a planejar o pedido de casamento perfeito. Ele junta humor, sensibilidade e IA generativa para tornar esse momento inesquecível. De ideias criativas ao local do pedido, ele te ajuda em tudo. 💘💡
 
 ---
 
-### 🧠 Sobre o Projeto
+## 🎯 Por que o Boris existe?
 
-**Boris Casa Comigo** é um assistente virtual desenvolvido com Streamlit e Gemini AI, projetado para ajudar na organização de pedidos de casamento e encontros especiais. Com uma abordagem descontraída e bem-humorada, o Boris guia o usuário por todas as etapas do planejamento, desde a concepção da ideia até os detalhes finais.
+> 🧠 Criado durante a **Imersão IA 2025 da Alura + Google**, como um exemplo real de como a IA pode transformar momentos da vida em experiências inesquecíveis.
 
-![Boris](https://github.com/GuiiLuiss/boris-casa-comigo/blob/main/imagem/Boris_Casa_Cmg.png)
----
-
-### 🎯 Funcionalidades
-
-* **Agente de Introdução e Perfil do Casal**: Coleta informações iniciais sobre o casal
-* **Agente de Ideias Criativas**: Sugere ideias personalizadas para pedidos e encontros.
-* **Agente Informativo**: Explica tradições e informações sobre noivado e casamento.
-* **Agente Financeiro**: Auxilia no planejamento financeiro do evento.
-* **Agente de Alianças e Joias**: Sugere opções de alianças e anéis dentro do orçamento.
-* **Agente de Planejamento de Tarefas**: Organiza datas e tarefas essenciais.
-* **Agente de Planejamento Detalhado do Momento**: Ajuda a planejar o discurso, música, fotografia e mais.
-* **Agente de Extras e Decoração**: Sugere detalhes finais e personalizados.
-* **Agente Finalizador**: Fornece um resumo completo do planejamento e um checklist prático.
+Nem todo mundo sabe como planejar um pedido de casamento marcante (Eu sou um deles nesse exato momento! Hahaha). Falta criatividade, tempo ou segurança sobre o que fazer. O **Boris resolve isso com estilo e inteligência**, guiando passo a passo com sugestões personalizadas, linguagem divertida e um toque romântico.
 
 ---
 
-### 🚀 Tecnologias Utilizadas
+## 🧠 O que o Boris faz?
 
-* [Python](https://www.python.org/)
-* [Streamlit](https://streamlit.io/)
-* [Gemini AI](https://ai.google/)
-* [Google Search API](https://developers.google.com/custom-search)
+O Boris não é só um chatbot. Ele é um **time completo de planejamento romântico**, dividido em agentes especializados:
+
+| Agente                          | Função                                          |
+| ------------------------------- | ----------------------------------------------- |
+| 💬 **Introdução e Perfil**      | Entende o casal e o momento atual               |
+| 🎨 **Ideias Criativas**         | Sugere pedidos personalizados e memoráveis      |
+| 📚 **Informativo**              | Traz curiosidades e tradições sobre noivado     |
+| 💰 **Financeiro**               | Ajuda a planejar dentro do seu orçamento        |
+| 💍 **Joias e Alianças**         | Dá ideias de anéis incríveis que cabem no bolso |
+| 🗓️ **Planejamento de Tarefas** | Organiza tudo por etapas e datas                |
+| 🎶 **Momento Final**            | Ajuda com discurso, música, fotos, tudo!        |
+| ✨ **Extras e Decoração**        | Detalhes finais que fazem diferença             |
+| ✅ **Checklist Final**           | Resumo completo do plano com checklist 💯       |
 
 ---
 
-### 🛠️ Instalação
+## 🚀 Tecnologias Utilizadas
+
+* 🐍 Python
+* 🧼 Streamlit
+* 🤖 Google Gemini AI
+* 🔍 Google Search API
+
+---
+
+## 🖼️ Preview visual
+
+| Interface do Boris em ação                        | Nosso mascote inspirador          |
+| ------------------------------------------------- | --------------------------------- |
+| ![Chat com o Boris](https://github.com/GuiiLuiss/boris-casa-comigo/blob/main/imagem/Boris_Casa_Cmg.png) | ![Doge mascot](https://camo.githubusercontent.com/6f83a6685d4d6265d664731c0b1ccca8f0a75184a0bee569577f55d9a20a46a6/68747470733a2f2f74322e7475646f63646e2e6e65742f3330383537333f773d36343626683d323834) |
+
+---
+
+## 🧪 Teste agora mesmo
+
+📲 Acesse a versão ao vivo do Boris em:
+🔗 [https://boris-casa-comigo.streamlit.app](https://boris-casa-comigo.streamlit.app)
+
+## ⚙️ Como usar o Boris
 
 1. Clone o repositório:
 
@@ -55,13 +69,13 @@ Agente inteligente que usa IA generativa (Google Gemini) para ajudar você a pla
    pip install -r requirements.txt
    ```
 
-3. Configure as variáveis de ambiente no arquivo `.env`:
+3. Configure a chave da API Gemini no `.env`:
 
    ```env
-   GOOGLE_API_KEY=your_google_api_key
+   GOOGLE_API_KEY=sua-chave-do-Gemini
    ```
 
-4. Execute a aplicação:
+4. Rode o app:
 
    ```bash
    streamlit run app.py
@@ -69,16 +83,38 @@ Agente inteligente que usa IA generativa (Google Gemini) para ajudar você a pla
 
 ---
 
-### 💡 Contribuição
+## 💡 Exemplos de uso
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
-
----
-
-### 📄 Licença
-
-Este projeto está licenciado sob a [MIT License](LICENSE).
+* Quer pedir alguém em casamento mas não faz ideia como? O Boris te ajuda.
+* Quer marcar um date com aquela gata ou aquele gato e não sabe qual lugar escolher? O Boris te ajuda.
+* Não sabe a diferença entre aliança, solitário e aparador? O Boris explica.
 
 ---
 
-Se tiver alguma dúvida ou precisar de mais informações, estou à disposição!
+## 🫶 Público-alvo
+
+* Quem vai pedir alguém em casamento e quer algo diferente
+* Casais/Solteiros sem ideias de lugar pra date
+* Pessoas com pouco tempo ou criatividade, mas muita vontade
+* Casais LGBTQIA+, héteros, modernos, tradicionais – todos são bem-vindos
+* Desenvolvedores que querem ver IA sendo usada com empatia e propósito
+
+---
+
+## 🙌 Contribua com o Boris
+
+Achou massa e quer colaborar? Puxe uma issue, faça um fork ou mande um PR.
+Vamos deixar o amor mais planejado com código aberto. ❤️
+
+---
+
+## 📜 Licença
+
+MIT – Faça bom uso, compartilhe o amor e dê os créditos. 😄
+
+---
+
+## 🌟 Vote no Boris!
+
+Se você curtiu esse projeto, deixa aquele apoio lá no Discord da Imersão IA 2025!
+Quem sabe você não ajuda mais pedidos de casamento memoráveis a acontecerem por aí? 😍
