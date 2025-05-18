@@ -8,7 +8,7 @@
 
 ## 🎯 Por que o Boris existe?
 
-> 🧠 Criado durante a **Imersão IA 2025 da Alura + Google**, como um exemplo real de como a IA pode transformar momentos da vida em experiências inesquecíveis.
+> Criado durante a **Imersão IA 2025 da Alura + Google**, como um exemplo real de como a IA pode transformar momentos da vida em experiências inesquecíveis.
 
 Nem todo mundo sabe como planejar um pedido de casamento marcante (Eu sou um deles nesse exato momento! Hahaha). Falta criatividade, tempo ou segurança sobre o que fazer. O **Boris resolve isso com estilo e inteligência**, guiando passo a passo com sugestões personalizadas, linguagem divertida e um toque romântico.
 
