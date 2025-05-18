@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Streamlit app otimizado para "Boris Casa Comigo"
-- Formatação Black & Lint
-- Comentários e funções reutilizáveis
 - Configuração de agentes por dicionário
 - Implementação de streaming para respostas em tempo real
 """
@@ -17,33 +15,34 @@ from google.genai import types
 import re
 
 # -----------------------------------------------------------------------------
-# Carregamento de variáveis de ambiente e configuração da API
+# Carregamento de variáveis de ambiente e configuração do cliente da Gemini API
 # -----------------------------------------------------------------------------
-load_dotenv(
-    dotenv_path=".env",
-    override=False,
-)
-API_KEY = os.getenv("GOOGLE_API_KEY")
-client = genai.Client(api_key=API_KEY)
+load_dotenv(dotenv_path=".env",override=False) # Carrega variáveis do .env
+API_KEY = os.getenv("GOOGLE_API_KEY")  # Lê a chave da API
+client = genai.Client(api_key=API_KEY) # Inicializa o cliente da Gemini
 
 # -----------------------------------------------------------------------------
-# Função de Sanitização e Limite de Input
+# Função de sanitização do input do usuário
 # -----------------------------------------------------------------------------
 def sanitize_input(user_input: str) -> str:
+    # Remove tags HTML e espaços
     sanitized = re.sub(r'<.*?>', '', user_input)
     sanitized = sanitized.strip()
-    # Limita o tamanho do input
+    
+    # Limita o tamanho do input para evitar sobrecarga
     if len(sanitized) > 2000:
         sanitized = sanitized[:2000]
     return sanitized
 
 
 # -----------------------------------------------------------------------------
-# Configuração inicial do Streamlit
+# Configuração inicial da interface Streamlit
 # -----------------------------------------------------------------------------
 st.set_page_config(
     page_title="Boris Casa Comigo", page_icon="💍", layout="wide"
 )
+
+# Título e descrição principal do app
 st.title("✨ Boris Casa Comigo ✨")
 st.markdown(
     (
@@ -55,15 +54,15 @@ st.markdown(
 )
 
 # -----------------------------------------------------------------------------
-# Estado da sessão: histórico de mensagens e etapa atual
+# Inicializa estado da sessão para manter histórico e controle de etapa
 # -----------------------------------------------------------------------------
 if "historico" not in st.session_state:
-    st.session_state.historico = []
+    st.session_state.historico = [] # Guarda conversas anteriores
 if "etapa" not in st.session_state:
-    st.session_state.etapa = 0
+    st.session_state.etapa = 0 # Controla em que fase do planejamento o usuário está
 
 # -----------------------------------------------------------------------------
-# Constantes de prompt e instruções comuns
+# Instruções comuns usadas em todos os agentes
 # -----------------------------------------------------------------------------
 SYSTEM_PROMPT = (
     "Você é o Boris, um consultor do amor com a vibe descontraída e bem-humorada "
@@ -80,7 +79,7 @@ TONE_INSTRUCOES = (
 )
 
 # -----------------------------------------------------------------------------
-# Definição das missões dos agentes e configurações específicas
+# Lista de agentes com suas respectivas missões e ferramentas
 # -----------------------------------------------------------------------------
 AGENT_CONFIG = [
     {
@@ -181,11 +180,11 @@ AGENT_CONFIG = [
     },
 ]
 
-# Sequência fixa de chaves para fluxo natural
+# Define a ordem de execução dos agentes
 SEQUENCE = [conf["key"] for conf in AGENT_CONFIG]
 
 # -----------------------------------------------------------------------------
-# Funções reutilizáveis para geração de prompt e chamada da API
+# Função para construir o prompt final com todo o contexto
 # -----------------------------------------------------------------------------
 def build_prompt(history: list, mission: str, pergunta: str) -> str:
     """
@@ -202,7 +201,9 @@ def build_prompt(history: list, mission: str, pergunta: str) -> str:
         f"Boris:"
     )
 
-
+# -----------------------------------------------------------------------------
+# Função para chamar o agente e exibir resposta em streaming
+# -----------------------------------------------------------------------------
 def call_agent_with_streaming(key: str, pergunta: str, message_placeholder):
     """
     Chama o agente identificado pela chave na configuração AGENT_CONFIG,
@@ -257,7 +258,7 @@ def call_agent_with_streaming(key: str, pergunta: str, message_placeholder):
 
 
 # -----------------------------------------------------------------------------
-# Orquestrador que seleciona o agente conforme etapa
+# Função que gerencia a ordem dos agentes com base na etapa
 # -----------------------------------------------------------------------------
 def agente_orquestrador(pergunta: str, message_placeholder) -> str:
     idx = st.session_state.etapa
@@ -268,13 +269,16 @@ def agente_orquestrador(pergunta: str, message_placeholder) -> str:
         st.session_state.etapa += 1
     return resposta
 
-# Defina no topo do seu código
-ICONES = {
-    "Você": "😎",  # troque pela URL real
-    "Boris": "https://camo.githubusercontent.com/6f83a6685d4d6265d664731c0b1ccca8f0a75184a0bee569577f55d9a20a46a6/68747470733a2f2f74322e7475646f63646e2e6e65742f3330383537333f773d36343626683d323834"    # troque pela URL real
-}
 # -----------------------------------------------------------------------------
-# Interface de chat sequencial com o usuário
+# Avatares personalizados para a interface de chat
+# -----------------------------------------------------------------------------
+ICONES = {
+    "Você": "😎",
+    "Boris": "https://camo.githubusercontent.com/6f83a6685d4d6265d664731c0b1ccca8f0a75184a0bee569577f55d9a20a46a6/68747470733a2f2f74322e7475646f63646e2e6e65742f3330383537333f773d36343626683d323834"
+}
+
+# -----------------------------------------------------------------------------
+# Função principal do aplicativo
 # -----------------------------------------------------------------------------
 def main():
     """
@@ -286,12 +290,12 @@ def main():
         with st.chat_message(name=nome, avatar=avatar_url):
             st.markdown(msg)
 
-    # Processa nova mensagem do usuário
+    # Captura nova entrada do usuário
     pergunta = st.chat_input("Digite sua mensagem para o Boris...")
     if pergunta:
         pergunta = sanitize_input(pergunta)
         
-        # Adiciona a pergunta do usuário ao histórico e exibe
+        # Exibe e salva a mensagem do usuário
         st.session_state.historico.append(("Você", pergunta))
         with st.chat_message(name="Você", avatar=ICONES.get("Você")):
             st.markdown(pergunta)
@@ -305,6 +309,6 @@ def main():
         # Adiciona a resposta completa ao histórico
         st.session_state.historico.append(("Boris", resposta))
 
-
+# Executa o app quando rodado diretamente
 if __name__ == "__main__":
     main()
