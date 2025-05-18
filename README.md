@@ -2,7 +2,7 @@
 
 > “Fala, meu consagrado! Chegou a hora de transformar aquele ‘vamos casar?’ em um momento ÉPICO, digno de cinema... ou pelo menos de um bom vídeo no Insta, né não?” — Boris
 
-**Boris Casa Comigo** é um agente inteligente que te ajuda a planejar o pedido de casamento perfeito. Ele junta humor, sensibilidade e IA generativa para tornar esse momento inesquecível. De ideias criativas ao local do pedido, ele te ajuda em tudo. 💘💡
+**Boris Casa Comigo** é um agente inteligente que te ajuda a planejar o pedido de casamento perfeito. Ele junta humor de "quebrada", sensibilidade e IA generativa para tornar esse momento inesquecível. De ideias criativas ao local do pedido, ele te ajuda em tudo. 💘💡
 
 ---
 
