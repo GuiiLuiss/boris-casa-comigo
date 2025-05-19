@@ -111,10 +111,3 @@ Vamos deixar o amor mais planejado com código aberto. ❤️
 ## 📜 Licença
 
 MIT – Faça bom uso, compartilhe o amor e dê os créditos. 😄
-
----
-
-## 🌟 Vote no Boris!
-
-Se você curtiu esse projeto, deixa aquele apoio lá no Discord da Imersão IA 2025!
-Quem sabe você não ajuda mais pedidos de casamento memoráveis a acontecerem por aí? 😍
